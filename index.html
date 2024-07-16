@@ -6,59 +6,7 @@
     <meta name="description" content="Get your personalized Panchangam based on your name and date.">
     <meta name="keywords" content="Panchangam, Astrology, Personalized Panchangam">
     <title>Panchangam</title>
-    <style>
-        body {
-            background-image: url('om-pattern.png'); /* Background image with Om symbols */
-            background-size: cover;
-            font-family: Arial, sans-serif;
-            color: #333;
-            text-align: center;
-            padding: 20px;
-        }
-        .container {
-            max-width: 600px;
-            margin: 0 auto;
-            padding: 20px;
-            background-color: rgba(255, 255, 255, 0.8);
-            border-radius: 10px;
-            box-shadow: 0 0 10px rgba(0,0,0,0.1);
-        }
-        h1 {
-            color: green;
-        }
-        .input-field {
-            margin-bottom: 10px;
-        }
-        .input-field label {
-            display: block;
-            margin-bottom: 5px;
-        }
-        .input-field input {
-            width: 100%;
-            padding: 8px;
-            border: 1px solid #ccc;
-            border-radius: 5px;
-        }
-        .input-field input:focus {
-            border-color: red;
-        }
-        button {
-            background-color: green;
-            color: white;
-            padding: 10px 20px;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-        }
-        button:hover {
-            background-color: darkgreen;
-        }
-        .ganesh-image {
-            max-width: 100%;
-            height: auto;
-            margin-bottom: 20px;
-        }
-    </style>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <div class="container">
@@ -70,21 +18,13 @@
                 <input type="text" id="name" name="name" required>
             </div>
             <div class="input-field">
-                <label for="date">Date:</label>
-                <input type="date" id="date" name="date" required>
+                <label for="dob">Date of Birth:</label>
+                <input type="date" id="dob" name="dob" required>
             </div>
             <button type="submit">Get Panchangam</button>
         </form>
         <div id="result" style="margin-top: 20px;"></div>
     </div>
-    <script>
-        document.getElementById('panchangam-form').addEventListener('submit', function(event) {
-            event.preventDefault();
-            const name = document.getElementById('name').value;
-            const date = document.getElementById('date').value;
-            const resultDiv = document.getElementById('result');
-            resultDiv.innerHTML = `<h2>Hello, ${name}!</h2><p>Your personalized Panchangam for ${date} will be displayed here.</p>`;
-        });
-    </script>
+    <script src="script.js"></script>
 </body>
 </html>
