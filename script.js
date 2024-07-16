@@ -1,7 +1,10 @@
 document.getElementById('astrology-form').addEventListener('submit', function(event) {
     event.preventDefault();
     const name = document.getElementById('name').value;
+    const gender = document.getElementById('gender').value;
     const dob = document.getElementById('dob').value;
+    const birthplace = document.getElementById('birthplace').value;
+    const birthtime = document.getElementById('birthtime').value;
     const resultDiv = document.getElementById('result');
 
     // Placeholder for Astrology data
@@ -13,5 +16,12 @@ document.getElementById('astrology-form').addEventListener('submit', function(ev
         <p><strong>Daily Horoscope:</strong> You will have a productive day and may receive good news regarding your career.</p>
     `;
 
-    resultDiv.innerHTML = `<h2>Hello, ${name}!</h2><p>Your personalized astrology report for ${dob}:</p>${astrologyData}`;
+    resultDiv.innerHTML = `
+        <h2>Hello, ${name}!</h2>
+        <p>Gender: ${gender}</p>
+        <p>Birth Place: ${birthplace}</p>
+        <p>Birth Time: ${birthtime}</p>
+        <p>Your personalized astrology report for ${dob}:</p>
+        ${astrologyData}
+    `;
 });
