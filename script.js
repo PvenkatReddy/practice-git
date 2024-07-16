@@ -1,21 +1,17 @@
-document.getElementById('panchangam-form').addEventListener('submit', function(event) {
+document.getElementById('astrology-form').addEventListener('submit', function(event) {
     event.preventDefault();
     const name = document.getElementById('name').value;
     const dob = document.getElementById('dob').value;
     const resultDiv = document.getElementById('result');
 
-    // Placeholder for Panchangam data
-    const panchangamData = `
-        <p><strong>Sunrise:</strong> 6:00 AM</p>
-        <p><strong>Sunset:</strong> 6:00 PM</p>
-        <p><strong>Tithi:</strong> Shukla Paksha</p>
-        <p><strong>Nakshatra:</strong> Rohini</p>
-        <p><strong>Yoga:</strong> Vishkambha</p>
-        <p><strong>Karana:</strong> Balava</p>
-        <p><strong>Rahu Kalam:</strong> 10:30 AM - 12:00 PM</p>
-        <p><strong>Yamaganda:</strong> 3:00 PM - 4:30 PM</p>
-        <p><strong>Gulikai:</strong> 7:30 AM - 9:00 AM</p>
+    // Placeholder for Astrology data
+    const astrologyData = `
+        <p><strong>Sun Sign:</strong> Aries</p>
+        <p><strong>Moon Sign:</strong> Taurus</p>
+        <p><strong>Ascendant:</strong> Gemini</p>
+        <p><strong>Planetary Positions:</strong> Sun in Aries, Moon in Taurus, Mars in Leo</p>
+        <p><strong>Daily Horoscope:</strong> You will have a productive day and may receive good news regarding your career.</p>
     `;
 
-    resultDiv.innerHTML = `<h2>Hello, ${name}!</h2><p>Your personalized Panchangam for ${dob}:</p>${panchangamData}`;
+    resultDiv.innerHTML = `<h2>Hello, ${name}!</h2><p>Your personalized astrology report for ${dob}:</p>${astrologyData}`;
 });
