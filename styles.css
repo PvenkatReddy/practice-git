@@ -1,6 +1,7 @@
 body {
     background-image: url('om-pattern.png'); /* Background image with Om symbols */
-    background-size: cover;
+    background-size: 100px 100px; /* Adjust size to make symbols smaller */
+    background-repeat: repeat;
     font-family: Arial, sans-serif;
     color: #333;
     text-align: center;
